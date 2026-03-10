@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IGCSE 0500 Question 3 Writing Hub</title>
 <style>
   :root{
@@ -12,12 +12,13 @@
     --text:#1f2937;
     --muted:#5f6b7a;
     --blue:#1d4ed8;
-    --blue2:#2563eb;
+    --blue-dark:#1e3a8a;
     --soft:#eef4ff;
+    --soft2:#f8fbff;
+    --gold:#fff5d8;
     --green:#eaf8ef;
     --rose:#fdecec;
     --dark:#0f172a;
-    --gold:#fff5d8;
   }
   *{box-sizing:border-box}
   body{
@@ -27,13 +28,13 @@
     color:var(--text);
   }
   .page{
-    max-width:1500px;
+    max-width:1450px;
     margin:0 auto;
     padding:20px;
   }
   .hero{
     background:linear-gradient(135deg,#1e40af,#2563eb,#4338ca);
-    color:#fff;
+    color:white;
     padding:24px;
     border-radius:18px;
     display:flex;
@@ -49,13 +50,13 @@
     margin-bottom:8px;
   }
   .hero h1{margin:0 0 10px 0}
-  .hero p{margin:0; line-height:1.6}
+  .hero p{margin:0;line-height:1.6}
   .hero-note{
-    max-width:340px;
+    max-width:360px;
     background:rgba(255,255,255,.12);
-    padding:14px;
+    border:1px solid rgba(255,255,255,.18);
     border-radius:12px;
-    border:1px solid rgba(255,255,255,.16);
+    padding:14px;
   }
   .mode-tabs{
     display:flex;
@@ -74,11 +75,11 @@
   }
   .tab-btn.active{
     background:var(--blue);
-    color:#fff;
+    color:white;
   }
   .layout{
     display:grid;
-    grid-template-columns:320px 1fr;
+    grid-template-columns:300px 1fr;
     gap:16px;
   }
   .card{
@@ -109,33 +110,55 @@
     padding:14px;
     margin-bottom:14px;
   }
+  .tip-box{
+    background:var(--gold);
+    border-radius:12px;
+    padding:14px;
+  }
   .text-box{
     white-space:pre-wrap;
-    background:#fff;
+    background:white;
     border:1px solid var(--line);
     border-radius:12px;
     padding:14px;
     line-height:1.7;
-    max-height:430px;
+    max-height:420px;
     overflow:auto;
   }
   pre.model{
     white-space:pre-wrap;
-    background:#0f172a;
+    background:var(--dark);
     color:#e6eef9;
     border-radius:12px;
     padding:14px;
     line-height:1.7;
     overflow:auto;
+    margin:0;
+  }
+  .label{
+    display:inline-block;
+    padding:5px 9px;
+    border-radius:999px;
+    background:#eef2ff;
+    color:#3730a3;
+    font-size:.85rem;
+    font-weight:700;
+  }
+  .task-tabs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:8px;
   }
   textarea{
     width:100%;
-    min-height:240px;
+    min-height:250px;
     padding:12px;
     border-radius:10px;
     border:1px solid #bcc8d6;
     font-size:15px;
     line-height:1.6;
+    resize:vertical;
   }
   button.btn{
     border:none;
@@ -173,31 +196,16 @@
     background:var(--green);
     border-radius:12px;
     padding:14px;
+    margin-bottom:12px;
   }
   .next{
     background:var(--rose);
     border-radius:12px;
     padding:14px;
   }
-  .tip-box{
-    background:var(--gold);
-    border-radius:12px;
-    padding:14px;
-  }
-  .task-tabs{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-top:8px;
-  }
-  .label{
-    display:inline-block;
-    padding:5px 9px;
-    border-radius:999px;
-    background:#eef2ff;
-    color:#3730a3;
-    font-size:.85rem;
-    font-weight:700;
+  ul.tight{
+    margin:8px 0 0 18px;
+    padding:0;
   }
   @media (max-width:1000px){
     .layout,.stat-grid{grid-template-columns:1fr}
@@ -211,11 +219,11 @@
     <div>
       <div class="eyebrow">IGCSE First Language English 0500 / 0990</div>
       <h1>Question 3 Writing Hub</h1>
-      <p>Every model page includes the text, the question, tips, and the model answer. Every practice page includes the text, the question, tips, and the writing box at the bottom.</p>
+      <p>Every model page includes Text C, Question 3, helpful tips, and a model answer. Every practice page includes Text C, Question 3, tips, a writing box, and feedback.</p>
     </div>
     <div class="hero-note">
       <strong>Before writing</strong>
-      <p>Identify role, audience and purpose. Then cover A1, A2 and A3 clearly, use your own words, and stay within 250–350 words.</p>
+      <p>Identify role, audience and purpose. Cover A1, A2 and A3 clearly, use your own words, and stay within 250–350 words.</p>
     </div>
   </header>
 
@@ -233,17 +241,17 @@
 <script>
 const LEARN = {
   "Article": {
-    "tips": [
-      "Use a clear headline.",
+    tips: [
+      "Use a suitable headline.",
       "Write for a public audience.",
-      "Cover A1, A2 and A3 in a logical order.",
-      "Explain ideas instead of just listing them.",
-      "Aim for 250–350 words."
+      "Cover all three bullets in a logical order.",
+      "Explain ideas instead of simply listing them.",
+      "Stay within 250–350 words."
     ],
-    "items": [
+    items: [
       {
-        "title": "Model 1 – The Penguin Lessons",
-        "text": `Text C: The Penguin Lessons
+        title: "Model – The Penguin Lessons",
+        text: `Text C: The Penguin Lessons
 
 The narrator, Tom Michell, has borrowed his friend’s luxury holiday apartment by the sea. It is out of season, and the friend is not using the apartment himself. Tom is enjoying a few days relaxing and exploring the quiet resort, and unexpectedly meets a new friend and companion.
 
@@ -256,7 +264,7 @@ I turned and walked round the promontory to the eastern side. I had only been st
 I understood then why there were so few penguins in the harbour – only a lucky few had avoided the oil slick.
 
 One valiant bird was alive: a single survivor struggling amid all that death. I decided that I could not abandon it. Using improvised rubbish from the beach, I caught the penguin and carried it back, only then realising how impossible cleaning it might be in a luxury flat.`,
-        "question": `Question 3
+        question: `Question 3
 
 Imagine you are a local journalist. Recent events have prompted you to write a magazine article about the need to better safeguard the area.
 
@@ -267,7 +275,7 @@ In your article you should explain:
 
 Begin your article with a suitable headline.
 Write about 250 to 350 words.`,
-        "model": `Why Our Coastline Must Be Protected
+        model: `Why Our Coastline Must Be Protected
 Our coastal town has long been a hidden treasure. Visitors are drawn to its elegant holiday apartments overlooking the sea, its small and stylish harbour, and the colourful houses set against a brilliant blue sky. Fishing boats and leisure craft gently rock in the sheltered waters, while shoals of fish flash beneath the surface. Even penguins can be seen darting gracefully through the harbour, delighting tourists and nature lovers alike. It is a place people visit to relax, breathe clean sea air and admire unspoilt scenery.
 
 However, beneath this beauty lies a serious threat. Oil pollution from tankers washing out their tanks at sea has devastated parts of our coastline. Recently, hundreds of penguins were found washed ashore, their bodies smothered in thick oil. The beach, once peaceful and inviting, became a grim and distressing sight. If this continues, wildlife will disappear, the ecosystem will suffer long-term damage, and visitors will think twice before returning. Tourism, a vital source of income for the area, could collapse. Without stronger regulation and proper environmental safeguards, the destruction will only worsen.
@@ -280,17 +288,16 @@ Tom’s actions remind us that we cannot simply walk away from environmental dam
   },
 
   "Interview": {
-    "tips": [
-      "Keep the interviewer’s questions short.",
-      "Make each answer developed and personal.",
-      "Use a natural spoken tone.",
-      "Cover all three questions fully.",
-      "Aim for 250–350 words in total."
+    tips: [
+      "Use short interviewer questions.",
+      "Make the answers developed and natural.",
+      "Keep the voice suitable for speech.",
+      "Cover all three questions fully."
     ],
-    "items": [
+    items: [
       {
-        "title": "Model 1 – River Game Reserve",
-        "text": `Text C: River Game Reserve
+        title: "Model – River Game Reserve",
+        text: `Text C: River Game Reserve
 
 The narrator, Frances, and her husband, Lawrence, own River Game Reserve. This text is about a herd of elephants coming to live at the reserve.
 
@@ -301,7 +308,7 @@ But I need to go back a few years to when we bought River Game Reserve, a beauti
 There was no one else to accommodate the herd safely, so, two weeks later in the middle of a night of torrential rain, three huge articulated trucks brought the elephants to us. Just as the trucks pulled in, a tyre exploded, and the vehicle tilted dangerously in the mud. It wasn’t until dawn that we managed to get them into the secure enclosure.
 
 They weren’t there for long. By the next day, they’d figured out a way to get past the electric fence by pushing a large tree onto it. It was ten days before the herd was returned. Night after night, Lawrence stayed as close to the secure enclosure as he dared, singing to those angry elephants, talking to them and telling them stories until he was hoarse.`,
-        "question": `Question 3
+        question: `Question 3
 
 Write the words of an interview in which Lawrence answers these questions:
 • How did you come to be responsible for the elephants, and what were your concerns before they arrived?
@@ -309,7 +316,7 @@ Write the words of an interview in which Lawrence answers these questions:
 • How are the elephants settling now, and what advice would you give other game reserve owners about elephants?
 
 Write about 250 to 350 words.`,
-        "model": `Interviewer: How did you come to be responsible for the elephants, and what were your concerns before they arrived?
+        model: `Interviewer: How did you come to be responsible for the elephants, and what were your concerns before they arrived?
 Lawrence: It all happened quite suddenly. When my wife, Frances, and I took over River Game Reserve, we imagined protecting the natural habitat and caring for its wildlife, but we hadn’t considered looking after elephants. Then, an animal welfare group approached us with an urgent request there was a herd in need of a new home. Saying no wasn’t an option; there was simply nowhere else for them to go.
 That said, we were deeply concerned. We had no experience handling elephants, and the financial burden of securing a safe enclosure for them was daunting. Would we be able to provide what they needed? Could we ensure their safety and ours? It was a leap into the unknown, and the reality hit me hard when those massive transport trucks arrived in the middle of a storm.
 
@@ -326,17 +333,16 @@ For anyone considering taking on elephants, my advice is simple: patience, respe
   },
 
   "Letter": {
-    "tips": [
-      "Use a greeting and a sign-off.",
-      "Show the relationship with the reader clearly.",
-      "Include thoughts and feelings as well as events.",
-      "Use one main paragraph for each bullet.",
-      "Aim for 250–350 words."
+    tips: [
+      "Use a greeting and sign-off.",
+      "Keep the tone personal but controlled.",
+      "Include feelings as well as events.",
+      "Use one main paragraph for each bullet."
     ],
-    "items": [
+    items: [
       {
-        "title": "Model 1 – The Inn",
-        "text": `Text C: The inn
+        title: "Model – The Inn",
+        text: `Text C: The inn
 
 This text is taken from a longer narrative. At this point in the story, Hua has just started a new business venture, opening an inn with a Japanese theme. Today she has been receiving her first guests, assisted by the waitress, Tania.
 
@@ -347,7 +353,7 @@ The view from the inn’s kitchen window lifted her heart: new guests were alrea
 Beyond the garden perimeter were the river and the newly built theatre. She hoped theatre-goers would be her reliable patrons.
 
 Just before 7.30, Hua found herself standing in the problematic dining room. Mr and Mrs Kato, new arrivals, looked into the room and admired the bushes. Later, Hua met two further guests, Mr and Mrs Dreyfuss. Tania soon reported that something odd was going on. Hua overheard what sounded like a plan to steal a big car in the car park, but it turned out that Mr Dreyfuss was only rehearsing lines for a show at the theatre over the river.`,
-        "question": `Question 3
+        question: `Question 3
 
 You are Hua, the owner of the inn. The next day you write a letter to your father back home telling him about your new business venture. In your letter you should:
 • describe the inn and what you hope will appeal to guests
@@ -355,7 +361,7 @@ You are Hua, the owner of the inn. The next day you write a letter to your fathe
 • explain what plans you have for developing the business in the future and how you hope to accomplish these plans
 
 Write about 250 to 350 words.`,
-        "model": `Dear Dad,
+        model: `Dear Dad,
 I hope you’re doing well! I couldn’t wait to write to you about the first day at my new inn. It’s been such an exciting start, and I think you’d love it here. The whole idea of creating a cozy, Japanese-themed getaway feels like a dream come true. Even though it’s a lot of work, I’m already seeing how special this place can become.
 
 The inn is in a beautiful spot, close to the river and right by a newly built theatre, which I’m hoping will attract plenty of guests. The garden is my favourite feature it has colourful maple trees, blooming rhododendrons, and winding stone paths that lead to an arched bridge over a stream. It’s peaceful and perfect for anyone looking to relax or enjoy a picturesque walk. Inside, the dining room is a work in progress; it’s too dark and crowded, but for now, guests can eat outside in the garden. The menu features traditional dishes like the miso fish bake you taught me, and people seem to love the authentic, homely touch.
@@ -372,17 +378,16 @@ Hua`
   },
 
   "Journal": {
-    "tips": [
-      "Write in a personal and reflective voice.",
-      "Show what the writer felt at the time and now.",
-      "Do not just retell events; reflect on them.",
-      "End with a clear final thought.",
-      "Aim for 250–350 words."
+    tips: [
+      "Write in a personal reflective voice.",
+      "Show what the writer felt at the time and what they feel now.",
+      "Reflect, do not just retell the events.",
+      "End with a clear personal thought."
     ],
-    "items": [
+    items: [
       {
-        "title": "Model 1 – Ocean Hotel",
-        "text": `Text C: Ocean Hotel
+        title: "Model – Ocean Hotel",
+        text: `Text C: Ocean Hotel
 
 In this text, the narrator, Jenny, describes a day and night that she and her friend, Eloise, spent at Ocean Hotel, a hotel under the sea.
 
@@ -399,7 +404,7 @@ Eloise and I stood on the water’s edge waiting to take the ten-metre dive down
 The hotel manager introduced himself as Ocean King. He told us we wouldn’t be able to use underwater camera equipment or bring toiletries because of the risk of subsurface explosions.
 
 Almost immediately, Ocean King took us scuba diving near Ocean Hotel. I was thrilled by the sights: clownfish, sea anemones, silvery fish and corals. I passed the rest of my day diving happily, while Eloise sat on a sea wall, staring out across the ocean.`,
-        "question": `Question 3
+        question: `Question 3
 
 Write Eloise’s journal entry. In it she should:
 • explain how she felt when she first learned about Jenny’s plan to stay at Ocean Hotel and why
@@ -407,7 +412,7 @@ Write Eloise’s journal entry. In it she should:
 • explain how she feels now and how she might approach Jenny about their next trip away
 
 Write about 250 to 350 words.`,
-        "model": `Journal Entry: January 16, 2025
+        model: `Journal Entry: January 16, 2025
 Dear Journal,
 When Jenny first shared her plans for our stay at Ocean Hotel, an underwater adventure, I must admit my heart sank a bit. The thought of sleeping beneath the waves was far outside my comfort zone, especially since my diving skills have grown quite rusty. I remembered our last getaway, so serene and picturesque, and this contrast filled me with apprehension. Despite my reservations, I didn’t want to dampen Jenny’s excitement she was thrilled, and it was her turn to pick our destination.
 Ocean Hotel was unlike anything I'd ever seen. Originally an underwater research station, it now boasted accommodations where you could watch fish swim past your window. The novelty was breathtaking, but the reality of being submerged was overwhelming. Our quirky introduction by the hotel manager, who styled himself as Ocean King, complete with a fluorescent-green fishtail, was amusing, yet surreal. He explained the strict rules no cameras or toiletries due to the risk of subsurface explosions. This made the experience feel even more alienating.
@@ -420,17 +425,16 @@ Eloise`
   },
 
   "Report": {
-    "tips": [
-      "Use a title and a clear introduction.",
+    tips: [
+      "Use a clear title and introduction.",
       "Keep the tone formal and objective.",
-      "Use clear sections or focused paragraphs.",
-      "End with a conclusion or recommendation.",
-      "Aim for 250–350 words."
+      "Organise the report into clear sections.",
+      "End with a conclusion or recommendation."
     ],
-    "items": [
+    items: [
       {
-        "title": "Model 1 – Dog-Sled Expedition",
-        "text": `Text C: Riding the rails: learning how to drive a dog-sled
+        title: "Model – Dog-Sled Expedition",
+        text: `Text C: Riding the rails: learning how to drive a dog-sled
 
 In this article, journalist Lyn Marshall looks back at her adventure holiday in Alaska.
 
@@ -447,7 +451,7 @@ Still spellbound from gazing at the enormity of the Alaskan wilderness, I’d st
 Mike and Scarlett live sustainably and provide opportunities for adventurous souls to experience their eco-lifestyle first hand.
 
 Driving a dog-sled is harder than it looks. There were many thrills and spills. Losing control on one downhill run, I tipped sideways onto the snow. Each evening, we settled in at a different location, often an old miner’s cabin, where our teams were secured and cared for. The teams are your lifeline, your escape route, so their health and wellbeing are paramount.`,
-        "question": `Question 3
+        question: `Question 3
 
 Write the words of a report. In your report:
 • explain the events of the evening exploration and the safety measures taken
@@ -455,7 +459,7 @@ Write the words of a report. In your report:
 • explain why dog-sledding should remain part of the experience
 
 Write about 250 to 350 words.`,
-        "model": `The Ultimate Experience Travel Company Report on Dog-Sledding Expedition in Alaska
+        model: `The Ultimate Experience Travel Company Report on Dog-Sledding Expedition in Alaska
 Prepared by: Mike
 
 Introduction
@@ -480,17 +484,16 @@ Lead Guide, The Ultimate Experience Travel Company`
   },
 
   "Speech / Talk": {
-    "tips": [
+    tips: [
       "Address the audience directly.",
       "Use a natural spoken tone.",
-      "State your purpose clearly at the start.",
-      "Develop each main point before moving on.",
+      "State the purpose clearly at the start.",
       "End strongly."
     ],
-    "items": [
+    items: [
       {
-        "title": "Model 1 – Base Station, Antarctica",
-        "text": `Text C: Base station, Antarctica
+        title: "Model – Base Station, Antarctica",
+        text: `Text C: Base station, Antarctica
 
 This text is about life and work at an Antarctic base station.
 
@@ -505,7 +508,7 @@ Summer was term time. Each evening scientists gave informal lectures: scientists
 As winter approached, activities on Base diminished. We were given new instructions by Base Commander Simon. We weren’t to walk off Base without telling him first. The sea ice was hardening at the shore; fresh snowfalls made it difficult to see where land stopped and sea began. We risked falling through.
 
 Safety was taken seriously. Temperatures dropped further. Snowstorms blanketed the runway. The last ship out depended on the weather.`,
-        "question": `Question 3
+        question: `Question 3
 
 You are Simon, the Base commander. You are giving a speech for a group of young people to explain to them the opportunities and challenges of living and working on the base station.
 
@@ -515,7 +518,7 @@ In your speech you should:
 • suggest the challenges and rewards of living and working at the Antarctic base station
 
 Write about 250 to 350 words.`,
-        "model": `Good morning, everyone,
+        model: `Good morning, everyone,
 My name is Simon, and I am the Base Commander here in Antarctica. Today, I want to give you a realistic picture of what living and working at our base station is like, because while this place offers extraordinary opportunities, it also demands resilience, discipline, and commitment.
 
 Let me begin with the range of jobs available on the base. Our scientists are at the heart of everything we do. Some work in laboratories analysing samples, while others head out into the field, drilling ice cores or diving beneath the frozen sea to study marine life such as seals and orcas. Supporting them are engineers and mechanics who keep our generators running, repair equipment, and maintain vital systems like sewage treatment. Pilots and air-traffic controllers play a crucial role, safely transporting teams to remote field camps. We also rely heavily on cooks, who manage food supplies and keep everyone fuelled during long, demanding days.
@@ -534,33 +537,54 @@ Thank you.`
 const PRACTICE = {
   "Article Practice": [
     {
-      "title": "Article Practice 1 – The Penguin Lessons",
-      "text": LEARN["Article"].items[0].text,
-      "question": LEARN["Article"].items[0].question,
-      "tips": [
-        "Use a headline.",
-        "Write for public readers.",
-        "Cover attractions, problems and Tom’s actions."
+      title: "Article Practice – Jane Goodall",
+      text: `Text C: A window on the world – my years with chimpanzees
+
+This text is part of a longer account. The narrator, Jane Goodall, is a scientist and expert in primate behaviour as well as an animal rights campaigner. She has recently returned to the jungle.
+
+I woke before the alarm. Breakfast – banana and coffee – was soon finished. Minutes later, pockets stuffed with camera, notebook, pencil, and a handful of raisins for lunch, I headed for the place where the evening before I’d watched 18 chimpanzees settle down for the night.
+
+In the trees, other chimpanzees of the group moved about, preparing for their day. This was my first day back with the chimps. I planned to enjoy getting reacquainted with my old friends, taking pictures and getting my climbing legs back.
+
+Thinking back I relived the thrill of watching Greybeard fishing for termites with stems of grass – humans weren’t the only tool-making animals. Nor were chimpanzees the placid vegetarians people supposed. I remembered grim years when the males of the community had waged war against a neighbouring chimp group.
+
+The rain began. The chimps climbed down and moved off through the soaked vegetation. I followed awkwardly, my cold wet clothes hindering movement. The world seemed hung with diamonds. The leaves were vivid green and the chimps’ black coats were shot with flashes of copper-brown.
+
+How much we still have to learn…`,
+      question: `Question 3
+
+You are a journalist writing a magazine article about Jane Goodall’s work.
+
+In your magazine article you should:
+• explain what Jane’s work involves and the challenges it presents
+• explain what Jane has learned about chimpanzees and their lives
+• suggest why Jane’s work is important and what she hopes to achieve
+
+Write about 250 to 350 words.`,
+      tips: [
+        "Use an engaging opening.",
+        "Explain what the work is really like.",
+        "Show why the research matters."
       ],
-      "keywords": [
-        ["harbour","boats","houses","fish","penguins"],
-        ["oil","pollution","damage","wildlife","tourism"],
-        ["rescued","penguin","save","captured","apartment"]
+      keywords: [
+        ["camera","notebook","observe","wait","jungle","rain","challenge","patience"],
+        ["tool","termites","social structure","feeding","travel","war","chimpanzees"],
+        ["important","protect","campaign","awareness","future","learn more"]
       ]
     }
   ],
 
   "Interview Practice": [
     {
-      "title": "Interview Practice 1 – Ironman",
-      "text": `Text C: What it’s like to be married to a future Ironman
+      title: "Interview Practice – Ironman",
+      text: `Text C: What it’s like to be married to a future Ironman
 
 Sam started training in January for Ironman Canada at the end of July. He got himself an expert coach and monthly training plans. He had to prepare for a 3.86 km swim, a 180.25 km bicycle ride and a marathon run.
 
 At first the training fitted reasonably well around family life, but by May and June it was taking over weekends. Family activities were reduced, childcare became harder, there was more washing, more food, more equipment and more pressure on everyone.
 
 Despite the stress, the final event was unforgettable. Watching Sam finish with the children cheering created a sense of pride and a feeling that the whole family had been through the journey together.`,
-      "question": `Question 3
+      question: `Question 3
 
 You are Sam. After completing the race you are interviewed for a podcast.
 
@@ -570,12 +594,12 @@ The interviewer asks:
 • What were the rewards of completing Ironman for you and your family?
 
 Write about 250 to 350 words.`,
-      "tips": [
+      tips: [
         "Use interview format.",
         "Answer all three questions fully.",
         "Keep the voice realistic and personal."
       ],
-      "keywords": [
+      keywords: [
         ["coach","training","swim","bike","run","prepare"],
         ["family","weekends","children","advice","cost"],
         ["finish","pride","family","reward","achievement"]
@@ -585,15 +609,15 @@ Write about 250 to 350 words.`,
 
   "Letter Practice": [
     {
-      "title": "Letter Practice 1 – Our Big Red Bus Ride",
-      "text": `Text C: Our big red bus ride
+      title: "Letter Practice – Our Big Red Bus Ride",
+      text: `Text C: Our big red bus ride
 
 Roger bought a second-hand double-decker bus and a small group of people answered his advert to travel around North America in it. The bus was painted red and adapted for life on the road, with beds, storage and supplies.
 
 The journey brought breakdowns, cramped conditions, money problems, difficult terrain and communication problems back home. The travellers often had to work to fund the trip.
 
 By the end, the trip had taught them about teamwork, resilience and the importance of better planning.`,
-      "question": `Question 3
+      question: `Question 3
 
 You are Vic. Shortly after the whole trip ends, you write a letter to a friend telling them about your experience.
 
@@ -603,11 +627,11 @@ In your letter you should:
 • explain what you think everyone learned through the experience and looking back what you all should have done differently and why
 
 Write about 250 to 350 words.`,
-      "tips": [
+      tips: [
         "Write as Vic to a friend.",
         "Include preparation, challenge and reflection."
       ],
-      "keywords": [
+      keywords: [
         ["bus","advert","red","beds","storage"],
         ["breakdown","space","money","work","communication"],
         ["teamwork","planning","learned","resilience","naive"]
@@ -617,15 +641,15 @@ Write about 250 to 350 words.`,
 
   "Journal Practice": [
     {
-      "title": "Journal Practice 1 – The Mars Expedition",
-      "text": `Text C: The Mars expedition
+      title: "Journal Practice 1 – The Mars Expedition",
+      text: `Text C: The Mars expedition
 
 Bob, Rajah and Sarah belong to a team of astronauts who have landed on Mars. Their Captain has sent them out on a mission to look for signs of life.
 
 Bob remained in the rover to receive communications and test samples. Sarah and Rajah argued throughout the mission, competing for glory. Bob quietly searched elsewhere and discovered damp soil and then clear liquid. Testing showed that biological organisms were present, and under the microscope tiny worm-shaped life forms appeared.
 
 The discovery was historic, but the Captain still had to think about the astronauts’ behaviour, the basic living conditions on Mars and the future of the expedition.`,
-      "question": `Question 3
+      question: `Question 3
 
 You are the Captain. After speaking to Bob about the mission of today, you write a journal entry about the progress of the Mars expedition so far.
 
@@ -635,20 +659,20 @@ In your journal entry, you should:
 • explain what you did after you received the news of today and what your hopes are for the rest of the time you spend on Mars
 
 Write about 250 to 350 words.`,
-      "tips": [
+      tips: [
         "Write as the Captain.",
         "Be reflective and personal.",
         "Include feelings about the team and the future."
       ],
-      "keywords": [
+      keywords: [
         ["mission","sample","water","life","microscope"],
         ["team","Bob","Sarah","Rajah","living"],
         ["news","future","hopes","report","research"]
       ]
     },
     {
-      "title": "Journal Practice 2 – Moving On Upwards",
-      "text": `Text C: Moving on upwards
+      title: "Journal Practice 2 – Moving On Upwards",
+      text: `Text C: Moving on upwards
 
 This text is taken from a longer narrative. At this point in the story, the narrator is taking part in a bicycle ride uphill for his fiftieth birthday celebration.
 
@@ -665,7 +689,7 @@ I recall pulling the dusty old machine out from the shed. Some oiling and greasi
 The car has halted. Sonny is gesticulating through the back window. ‘Dad!’ Is that consternation in his voice? ‘Dad, are you all right?’
 
 I may acknowledge defeat; I don’t know. Maybe just for a few seconds I need to take a rest. Sonny’s face drops as he watches me wilt. ‘Come on, Dad. You can do it.’`,
-      "question": `Question 3
+      question: `Question 3
 
 You are Sonny. After the family have watched the video you made to record your father’s fiftieth birthday bicycle ride, you write your journal entry in which you:
 • describe your father’s plans and preparations for his birthday and how you felt about them
@@ -673,12 +697,12 @@ You are Sonny. After the family have watched the video you made to record your f
 • describe your father’s reactions as he watched the finished birthday video of the whole ride
 
 Write about 250 to 350 words.`,
-      "tips": [
-        "Write in Sonny's voice.",
+      tips: [
+        "Write in Sonny’s voice.",
         "Explain both events and feelings.",
         "Cover preparation, the ride, and the video."
       ],
-      "keywords": [
+      keywords: [
         ["birthday","bike","challenge","training","preparation"],
         ["hill","cycling","struggle","breath","forest"],
         ["video","reaction","family","proud","laugh"]
@@ -688,15 +712,15 @@ Write about 250 to 350 words.`,
 
   "Report Practice": [
     {
-      "title": "Report Practice 1 – The New Job",
-      "text": `Text C: The new job
+      title: "Report Practice – The New Job",
+      text: `Text C: The new job
 
 Jeswin has just started work for an airline company as part of the airport ‘Meet and Greet’ team. Edgar shows him that the role includes checking documents, directing luggage, giving advice and watching for unattended baggage.
 
 Passengers can become confused in the roped-off check-in area. Trolleys can be awkward, queues can grow, and security problems or misunderstandings can occur. Staff are under pressure too.
 
 Jeswin handles a difficult incident calmly, which gives Edgar ideas for how the role and the customer experience could be improved.`,
-      "question": `Question 3
+      question: `Question 3
 
 You are Edgar. That night you write the report that your boss has asked for about the work the ‘Meet and Greet’ team do.
 
@@ -706,11 +730,11 @@ In your report you should:
 • suggest how the experiences of both passengers and ‘Meet and Greet’ staff could be improved
 
 Write about 250 to 350 words.`,
-      "tips": [
+      tips: [
         "Use a title and formal tone.",
         "Separate role, problems and improvements clearly."
       ],
-      "keywords": [
+      keywords: [
         ["documents","luggage","advice","passengers","role"],
         ["queues","security","confusing","trolleys","pressure"],
         ["improve","staff","training","equipment","information"]
@@ -720,13 +744,13 @@ Write about 250 to 350 words.`,
 
   "Speech / Talk Practice": [
     {
-      "title": "Speech Practice 1 – Into the Delta",
-      "text": `Text C: Into the Delta
+      title: "Speech Practice – Into the Delta",
+      text: `Text C: Into the Delta
 
 The Okavango Polers Trust is a community-owned eco-tourism project run by local polers. Visitors travel by mokoro through beautiful waterways, see hippos and wildlife and enjoy a calm, authentic experience.
 
 The project has already developed direct bookings, a permanent camp and training for guides. With greater support, it could benefit local people, wildlife and the wider region even more.`,
-      "question": `Question 3
+      question: `Question 3
 
 You are Baruti. You are giving a speech to local business people to persuade them to support the OPT.
 
@@ -736,12 +760,12 @@ In your speech you should:
 • suggest how the support of local business people might help the OPT and benefit local people, animals and the wider region
 
 Write about 250 to 350 words.`,
-      "tips": [
+      tips: [
         "Address the audience directly.",
         "Be persuasive.",
         "Show benefits for people and wildlife."
       ],
-      "keywords": [
+      keywords: [
         ["OPT","community","local","achieved","guides"],
         ["tourists","mokoro","hippos","water","enjoy"],
         ["support","local","people","animals","region"]
@@ -751,30 +775,30 @@ Write about 250 to 350 words.`,
 };
 
 const state = {
-  mode:'learn',
-  learnKey:Object.keys(LEARN)[0],
-  practiceKey:Object.keys(PRACTICE)[0],
-  taskIndex:0,
-  answers:{},
-  feedback:{}
+  mode: "learn",
+  learnKey: Object.keys(LEARN)[0],
+  practiceKey: Object.keys(PRACTICE)[0],
+  taskIndex: 0,
+  answers: {},
+  feedback: {}
 };
 
 function $(id){ return document.getElementById(id); }
-function esc(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+function esc(s){ return String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;"); }
 function wc(t){
-  const m=t.trim().match(/\b\w+[’'-]?\w*\b/g);
-  return m?m.length:0;
+  const m = t.trim().match(/\b\w+[’'-]?\w*\b/g);
+  return m ? m.length : 0;
 }
 
 function renderTabs(){
-  const wrap=$('modeTabs');
-  wrap.innerHTML='';
-  [['learn','Learn the Genre'],['practice','Practice by Genre']].forEach(([k,l])=>{
-    const b=document.createElement('button');
-    b.className='tab-btn'+(state.mode===k?' active':'');
-    b.textContent=l;
-    b.onclick=()=>{
-      state.mode=k;
+  const wrap = $("modeTabs");
+  wrap.innerHTML = "";
+  [["learn","Learn the Genre"],["practice","Practice by Genre"]].forEach(([k,l])=>{
+    const b = document.createElement("button");
+    b.className = "tab-btn" + (state.mode===k ? " active" : "");
+    b.textContent = l;
+    b.onclick = ()=>{
+      state.mode = k;
       renderTabs();
       renderSide();
       renderMain();
@@ -784,21 +808,21 @@ function renderTabs(){
 }
 
 function renderSide(){
-  $('sideTitle').textContent = state.mode==='learn' ? 'Genres' : 'Practice Genres';
-  const wrap=$('sideList');
-  wrap.innerHTML='';
-  const src = state.mode==='learn' ? LEARN : PRACTICE;
-  const active = state.mode==='learn' ? state.learnKey : state.practiceKey;
+  $("sideTitle").textContent = state.mode === "learn" ? "Genres" : "Practice Genres";
+  const wrap = $("sideList");
+  wrap.innerHTML = "";
+  const src = state.mode === "learn" ? LEARN : PRACTICE;
+  const active = state.mode === "learn" ? state.learnKey : state.practiceKey;
   Object.keys(src).forEach(k=>{
-    const b=document.createElement('button');
-    b.className='side-btn'+(active===k?' active':'');
-    b.textContent=k;
-    b.onclick=()=>{
-      if(state.mode==='learn'){
-        state.learnKey=k;
+    const b = document.createElement("button");
+    b.className = "side-btn" + (active===k ? " active" : "");
+    b.textContent = k;
+    b.onclick = ()=>{
+      if(state.mode === "learn"){
+        state.learnKey = k;
       }else{
-        state.practiceKey=k;
-        state.taskIndex=0;
+        state.practiceKey = k;
+        state.taskIndex = 0;
       }
       renderSide();
       renderMain();
@@ -808,15 +832,13 @@ function renderSide(){
 }
 
 function renderLearn(){
-  const g=LEARN[state.learnKey];
-  $('content').innerHTML = `
+  const g = LEARN[state.learnKey];
+  $("content").innerHTML = `
     <div class="card">
-      <div class="section">
-        <h2>${esc(state.learnKey)}</h2>
-      </div>
+      <div class="section"><h2>${esc(state.learnKey)}</h2></div>
       <div class="section tip-box">
         <h3>Tips</h3>
-        <ul>${g.tips.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        <ul class="tight">${g.tips.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
       </div>
       ${g.items.map(item=>`
         <div class="section">
@@ -835,74 +857,74 @@ function renderLearn(){
           <h3>Model Answer</h3>
           <pre class="model">${esc(item.model)}</pre>
         </div>
-      `).join('')}
+      `).join("")}
     </div>
   `;
 }
 
 function assess(text, task){
   const words = wc(text);
-  let reading=0;
-  let writing=0;
-  const strengths=[];
-  const improve=[];
-  const low=text.toLowerCase();
+  let reading = 0;
+  let writing = 0;
+  const strengths = [];
+  const improve = [];
+  const low = text.toLowerCase();
   const coverage = task.keywords.map(group => group.filter(k => low.includes(k.toLowerCase())).length);
 
   coverage.forEach(c=>{
-    if(c>=3) reading+=5;
-    else if(c>=2) reading+=3;
-    else if(c>=1) reading+=1;
+    if(c>=3) reading += 5;
+    else if(c>=2) reading += 3;
+    else if(c>=1) reading += 1;
   });
 
   if(words>=250 && words<=350){
-    writing+=2;
+    writing += 2;
     strengths.push(`Word count is within range at ${words} words.`);
   }else{
     improve.push(`Adjust your word count. You wrote ${words} words.`);
   }
 
-  const paras=text.split(/\n\s*\n/).filter(Boolean).length;
+  const paras = text.split(/\n\s*\n/).filter(Boolean).length;
   if(paras>=3){
-    writing+=2;
-    strengths.push('Paragraphing helps organise your response.');
+    writing += 2;
+    strengths.push("Paragraphing helps organise your response.");
   }else{
-    improve.push('Use clearer paragraphing.');
+    improve.push("Use clearer paragraphing.");
   }
 
-  if(low.includes('because')||low.includes('however')||low.includes('therefore')||low.includes('as a result')){
-    writing+=1;
-    strengths.push('You use some explanation and linking.');
+  if(low.includes("because") || low.includes("however") || low.includes("therefore") || low.includes("as a result")){
+    writing += 1;
+    strengths.push("You use some explanation and linking.");
   }else{
-    improve.push('Add more explanation and linking words.');
+    improve.push("Add more explanation and linking words.");
   }
 
-  if(low.includes('dear ') || low.includes('interviewer:') || low.includes('good morning') || low.includes('introduction') || low.includes('headline')){
-    writing+=2;
+  if(low.includes("dear ") || low.includes("interviewer:") || low.includes("good morning") || low.includes("introduction") || low.includes("report")){
+    writing += 2;
   }
 
-  if(coverage[0] < 2) improve.push('A1 needs more development.');
-  if(coverage[1] < 2) improve.push('A2 needs more development.');
-  if(coverage[2] < 2) improve.push('A3 needs more development.');
+  if(coverage[0] < 2) improve.push("A1 needs more development.");
+  if(coverage[1] < 2) improve.push("A2 needs more development.");
+  if(coverage[2] < 2) improve.push("A3 needs more development.");
 
-  if(writing < 5) improve.push('Develop ideas more fully and keep the style suitable for the genre.');
+  if(writing < 5) improve.push("Develop ideas more fully and keep the style suitable for the genre.");
 
-  return {words, reading, writing, total:reading+writing, strengths, improve};
+  return { words, reading, writing, total: reading + writing, strengths, improve };
 }
 
 function renderPractice(){
-  const group=PRACTICE[state.practiceKey];
-  const task=group[state.taskIndex];
-  const key = state.practiceKey + '_' + state.taskIndex;
-  const answer = state.answers[key] || '';
+  const group = PRACTICE[state.practiceKey];
+  const task = group[state.taskIndex];
+  const key = state.practiceKey + "_" + state.taskIndex;
+  const answer = state.answers[key] || "";
   const fb = state.feedback[key];
 
-  $('content').innerHTML = `
+  $("content").innerHTML = `
     <div class="card">
       <div class="section">
         <h2>${esc(state.practiceKey)}</h2>
         <div class="task-tabs">
-          ${group.map((t,i)=>`<button class="btn ${i===state.taskIndex?'':'secondary'}" onclick="selectTask(${i})">${esc(t.title)}</button>`).join('')}
+          ${group.map((t,i)=>`<button class="btn ${i===state.taskIndex ? "" : "secondary"}" onclick="selectTask(${i})">${esc(t.title)}</button>`).join("")}
         </div>
       </div>
 
@@ -918,7 +940,7 @@ function renderPractice(){
 
       <div class="section tip-box">
         <h3>Tips</h3>
-        <ul>${task.tips.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        <ul class="tight">${task.tips.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
       </div>
 
       <div class="section">
@@ -945,47 +967,47 @@ function renderPractice(){
           </div>
           <div class="good">
             <h3>What is working well</h3>
-            <ul>${fb.strengths.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+            <ul class="tight">${fb.strengths.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
           </div>
           <div class="next">
             <h3>How to improve</h3>
-            <ul>${fb.improve.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+            <ul class="tight">${fb.improve.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
           </div>
-        ` : ''}
+        ` : ""}
       </div>
     </div>
   `;
 
-  const box=$('essay');
-  box.addEventListener('input',()=>{
-    state.answers[key]=box.value;
-    $('wcc').textContent=wc(box.value);
+  const box = $("essay");
+  box.addEventListener("input", ()=>{
+    state.answers[key] = box.value;
+    $("wcc").textContent = wc(box.value);
   });
 }
 
 function selectTask(i){
-  state.taskIndex=i;
+  state.taskIndex = i;
   renderPractice();
 }
 
 function checkNow(){
-  const key=state.practiceKey+'_'+state.taskIndex;
-  const task=PRACTICE[state.practiceKey][state.taskIndex];
-  const text=$('essay').value;
-  state.answers[key]=text;
-  state.feedback[key]=assess(text,task);
+  const key = state.practiceKey + "_" + state.taskIndex;
+  const task = PRACTICE[state.practiceKey][state.taskIndex];
+  const text = $("essay").value;
+  state.answers[key] = text;
+  state.feedback[key] = assess(text, task);
   renderPractice();
 }
 
 function clearNow(){
-  const key=state.practiceKey+'_'+state.taskIndex;
-  state.answers[key]='';
+  const key = state.practiceKey + "_" + state.taskIndex;
+  state.answers[key] = "";
   delete state.feedback[key];
   renderPractice();
 }
 
 function renderMain(){
-  if(state.mode==='learn') renderLearn();
+  if(state.mode === "learn") renderLearn();
   else renderPractice();
 }
 
